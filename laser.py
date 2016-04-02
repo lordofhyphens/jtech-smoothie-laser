@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # Copyright (c) 2016 Joseph Lenox
 # 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -48,7 +49,6 @@ for f in args.files:
         continue
       if is_on:
         """ Process this gcode. """
-        print line
         if re.match(gcode_regex, line):
           res = re.match(gcode_regex, line).groups()
           if res[1] in ['0', '1', '2', '3']:
